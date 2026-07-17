@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of a creative developer passionate about games, finance, and web technologies." />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Minimal Inline CSS to show structure (optional - move to style.css) */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+    header, section, footer {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #007acc;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <h1>Hey, I'm Fatimah Hamzah</h1>
+    <p>A creative developer passionate about web, games, and finance.</p>
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blogs">Blog</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Student Spending Dashboard</h3>
+        <p>Interactive financial data visualization built with Chart.js and Recharts.</p>
+        <a href="#">View Project</a>
+      </article>
+      <article class="card">
+        <h3>Multiplayer Association Game</h3>
+        <p>A Firebase-powered web game where players match creative answers.</p>
+        <a href="#">View Project</a>
+      </article>
+      <article class="card">
+        <h3>Movie Finder CLI Tool</h3>
+        <p>A Python CLI app that helps locate and download public domain movies legally.</p>
+        <a href="#">View Project</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blogs" class="blogs">
+    <h2>Blog</h2>
+    <article class="blog-post">
+      <h3>How I Built My First Web App</h3>
+      <p><small>Posted on May 10, 2025</small></p>
+      <p>A quick overview of the tools and steps I used to build my first full-stack application...</p>
+      <a href="#">Read More</a>
+    </article>
+    <!-- Add more blog posts here -->
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about-me" class="about-me">
+    <h2>About Me</h2>
+    <img src = "WAHEEDAH ENLARGED PPT.jpg">
+
+    <p>
+      I'm a developer focused on building clean, responsive, and meaningful digital experiences. My projects often revolve around interactive learning tools, finance dashboards, and web-based games. I'm continuously exploring new tech — from Firebase to React, from data viz to command-line tools.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out — I’m always up for a meaningful collaboration or a tech chat.</p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>LinkedIn: <a href="#" target="_blank">my LinkedIn</a></p>
+    <p>GitHub: <a href="#" target="_blank">my GitHub</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Fatimah Hamzah. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
