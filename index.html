@@ -20,6 +20,21 @@
       max-width: 1000px;
       margin: auto;
     }
+    .about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Adds space between image and text */
+  flex-wrap: wrap; /* Ensures it stacks on mobile devices */
+}
+
+.profile-photo {
+  width: 200px;    /* Adjust size as needed */
+  height: 200px;   /* Keep same as width for a perfect circle */
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
     nav ul {
       list-style: none;
       padding: 0;
@@ -104,7 +119,9 @@
   <!-- About Me Section -->
   <section id="about-me" class="about-me">
     <h2>About Me</h2>
-    <img src = "WAHEEDAH ENLARGED PPT.jpg">
+    <div class = "about-container">
+      <img src = "WAHEEDAH ENLARGED PPT.jpg" alt = "A photo of me" class = "profile-photo">
+    </div>
 
     <p>
       I'm a developer focused on building clean, responsive, and meaningful digital experiences. My projects often revolve around interactive learning tools, finance dashboards, and web-based games. I'm continuously exploring new tech — from Firebase to React, from data viz to command-line tools.
