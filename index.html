@@ -127,6 +127,136 @@
       text-decoration: none;
       color: #007acc;
     }
+      .projects{
+    padding:6rem 2rem;
+}
+
+.section-header{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:4rem;
+}
+
+.section-tag{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+    .project-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(340px,1fr));
+
+    gap:2rem;
+    }
+    .project-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+    }
+    .project-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.12);
+
+    }
+    .project-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    }
+    .project-content{
+
+    padding:1.5rem;
+
+}
+
+.project-content h3{
+
+    margin-top:0;
+
+}
+
+.project-content p{
+
+    color:#64748b;
+
+}
+    .tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.6rem;
+
+    margin:1.2rem 0;
+
+}
+
+.tech-stack span{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:.45rem .9rem;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+    .project-links{
+
+    display:flex;
+
+    gap:1rem;
+
+}
+
+.project-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#2563eb;
+
+    padding:.7rem 1rem;
+
+    border-radius:8px;
+
+    transition:.25s;
+
+}
+
+.project-links a:hover{
+
+    background:#1d4ed8;
+
+}
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -189,27 +319,120 @@
   </header>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Student Spending Dashboard</h3>
-        <p>Interactive financial data visualization built with Chart.js and Recharts.</p>
-        <a href="https://student-spending-dashboard-fatimah.netlify.app/">View Project</a>
-      </article>
-      <article class="card">
-        <h3>Multiplayer Association Game</h3>
-        <p>A Firebase-powered web game where players match creative answers.</p>
-        <a href="https://investor-for-students-fatimah.netlify.app/">View Project</a>
-      </article>
-      <article class="card">
-        <h3>Movie Finder CLI Tool</h3>
-        <p>A Python CLI app that helps locate and download public domain movies legally.</p>
-        <a href="#">View Project</a>
-      </article>
-    </div>
-  </section>
+<section id="projects" class="projects">
 
+    <div class="section-header">
+        <p class="section-tag">Portfolio</p>
+        <h2>Featured Projects</h2>
+        <p>
+            A selection of projects focused on web development,
+            interactive experiences, education, and data visualization.
+        </p>
+    </div>
+
+    <div class="project-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+
+            <img
+                src="images/dashboard.jpg"
+                alt="Student Spending Dashboard">
+
+            <div class="project-content">
+
+                <h3>Student Spending Dashboard</h3>
+
+                <p>
+                    Interactive financial dashboard for visualizing
+                    student spending habits with dynamic charts.
+                </p>
+
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Chart.js</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://student-spending-dashboard-fatimah.netlify.app/">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Project 2 -->
+
+        <article class="project-card">
+
+            <img
+                src="images/game.jpg"
+                alt="Student investmentweb app">
+
+            <div class="project-content">
+
+                <h3>Invest today</h3>
+
+                <p>
+                  A simple website that shows live crypto price (uses API). It also includes a mini test.
+                  Users can interact with it to find an investment suitable for them plus estimated return 
+                  on investment.
+                </p>
+
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://investor-for-students-fatimah.netlify.app/">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+  <!-- Project 3 -->
+    <article class="project-card">
+
+            <img
+                src="images/game.jpg"
+                alt="Vibe Poet">
+
+            <div class="project-content">
+
+                <h3>Vibe Poet</h3>
+
+                <p>
+                    A lightweight website that generates themed poems. It is designed for poem lovers,
+                  night thinkers and anyone seeking calm. Tap to find your vibe.
+                </p>
+
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://5uig3n3ris.github.io/VibePoet2.0/">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+</section>
   <!-- Blog Section -->
   <section id="blogs" class="blogs">
     <h2>Blog</h2>
