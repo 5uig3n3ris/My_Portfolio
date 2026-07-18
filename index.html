@@ -288,6 +288,83 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+    #contactForm{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.form-group{
+
+    margin-bottom:1.5rem;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:.5rem;
+
+    font-weight:600;
+
+}
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+
+    padding:1rem;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:10px;
+
+    font-size:1rem;
+
+    box-sizing:border-box;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+.error{
+
+    color:#dc2626;
+
+    font-size:.85rem;
+
+    display:block;
+
+    margin-top:.35rem;
+
+}
+
+.invalid{
+
+    border-color:#dc2626 !important;
+
+}
+
+.valid{
+
+    border-color:#16a34a !important;
+
+}
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -302,7 +379,7 @@
 
   <!-- Header with Navigation -->
   <header>
-<section class="hero" id="home">
+<section class="page active" id="home">
     <div class="hero-content">
         <p class="greeting">👋 Hello, I'm</p>
 
@@ -340,7 +417,7 @@
   </header>
 
   <!-- Projects Section -->
-<section id="projects" class="projects">
+<section id="projects" class="page">
 
     <div class="section-header">
         <p class="section-tag">Portfolio</p>
@@ -455,13 +532,16 @@
 
 </section>
   <!-- Blog Section -->
-  <section id="blogs" class="blogs">
+  <section id="blogs" class="page">
     <h2>Blog</h2>
     <article class="blog-post">
       <h3>How I Built My First Web App</h3>
       <p><small>Posted on May 10, 2025</small></p>
       <p>A quick overview of the tools and steps I used to build my first full-stack application...</p>
-      <a href="https://dev.to/5uig3n3ris">Read More</a>
+      <a href="https://dev.to/5uig3n3ris"
+        class="btn primary">
+        Read More
+      </a>
     </article>
     <!-- Add more blog posts here -->
   </section>
@@ -477,12 +557,68 @@
       I'm a developer focused on building clean, responsive, and meaningful digital experiences. My projects often revolve around interactive learning tools, finance dashboards, and web-based games. I'm continuously exploring new tech — from Firebase to React, from data viz to command-line tools.
     </p>
   </section>
+<section id="contact" class="page">
+
+    <div class="section-header">
+        <p class="section-tag">Get In Touch</p>
+        <h2>Contact Me</h2>
+        <p>
+            Have a project, opportunity, or question? I'd love to hear from you.
+        </p>
+    </div>
+
+    <form id="contactForm" novalidate>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Your full name">
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="you@example.com">
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="08012345678">
+            <small class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Write your message..."></textarea>
+            <small class="error"></small>
+        </div>
+
+        <button type="submit" class="btn primary">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Feel free to reach out — I’m always up for a meaningful collaboration or a tech chat.</p>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Email: <a href="mailto:f.hamzah7386@miva.edu.ng">Email</a></p>
     <p>LinkedIn: <a href="#" target="_blank">my LinkedIn</a></p>
     <p>GitHub: <a href="#" target="_blank">my GitHub</a></p>
   </section>
@@ -505,6 +641,124 @@ link.classList.add("active");
     "",
     "#" + target
 );
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const message = document.getElementById("message");
+
+    let isValid = true;
+
+    clearErrors();
+
+    // Name
+    if(name.value.trim() === ""){
+        showError(name,"Name is required");
+        isValid = false;
+    }
+
+    // Email
+    const emailRegex =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(email.value.trim() === ""){
+
+        showError(email,"Email is required");
+        isValid = false;
+
+    }else if(!emailRegex.test(email.value)){
+
+        showError(email,"Enter a valid email");
+        isValid = false;
+
+    }
+
+    // Phone
+
+    const phoneRegex = /^[0-9]+$/;
+
+    if(phone.value.trim() === ""){
+
+        showError(phone,"Phone number is required");
+        isValid = false;
+
+    }else if(!phoneRegex.test(phone.value)){
+
+        showError(
+            phone,
+            "Phone number must contain only digits"
+        );
+
+        isValid = false;
+
+    }
+
+    // Message
+
+    if(message.value.trim() === ""){
+
+        showError(
+            message,
+            "Message cannot be empty"
+        );
+
+        isValid = false;
+
+    }
+
+    if(isValid){
+
+        alert("Message sent successfully!");
+
+        form.reset();
+
+    }
+
+});
+
+function showError(input,message){
+
+    input.classList.add("invalid");
+
+    input.nextElementSibling.textContent = message;
+
+}
+
+function clearErrors(){
+
+    document
+        .querySelectorAll(".error")
+        .forEach(error=>error.textContent="");
+
+    document
+        .querySelectorAll("input,textarea")
+        .forEach(input=>{
+
+            input.classList.remove("invalid");
+            input.classList.remove("valid");
+
+        });
+
+  }
+document
+.querySelectorAll("input, textarea")
+.forEach(field => {
+
+    field.addEventListener("input", () => {
+
+        field.classList.remove("invalid");
+        field.nextElementSibling.textContent = "";
+
+    });
+
+});
+
+
 </script>
 </body>
 </html>
