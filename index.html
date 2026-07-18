@@ -277,6 +277,49 @@
     padding:.6rem 1rem;
 
     }
+    .about{
+    padding:6rem 2rem;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:2rem;
+}
+
+.about-card{
+    background:var(--card-bg);
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:2rem;
+    transition:.3s ease;
+}
+
+.about-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.about-card h3{
+    margin-top:0;
+    color:var(--primary);
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    margin-top:1rem;
+}
+
+.skill-tags span{
+    background:#eff6ff;
+    color:var(--primary);
+    padding:.45rem .9rem;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:600;
+}
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -556,6 +599,61 @@
     <p>
       I'm a developer focused on building clean, responsive, and meaningful digital experiences. My projects often revolve around interactive learning tools, finance dashboards, and web-based games. I'm continuously exploring new tech — from Firebase to React, from data viz to command-line tools.
     </p>
+    <section id="about-me" class="about">
+
+    <div class="section-header">
+        <p class="section-tag">About</p>
+        <h2>About Me</h2>
+        <p>
+            I'm passionate about building software that solves real-world
+            problems and creates meaningful digital experiences.
+        </p>
+    </div>
+
+    <div class="about-grid">
+
+        <article class="about-card">
+            <h3>🎓 Educational Background</h3>
+            <p>
+                High school: 2013-2019
+                I got several tech certifications in the interim which sowed the passion for tech in me
+             .  BSc Computer Science: 2025-Present
+            </p>
+        </article>
+
+        <article class="about-card">
+            <h3>🚀 Career Aspirations</h3>
+            <p>
+                I would love to contribute meaningfully to the advancement of technologyin my local community. 
+              Another thing I'm passionate about is ethical AI
+            </p>
+        </article>
+
+        <article class="about-card">
+            <h3>💻 Technical Skills</h3>
+
+            <div class="skill-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Firebase</span>
+                <span>Git</span>
+                <span>Responsive Design</span>
+                <span>Chart.js</span>
+            </div>
+        </article>
+
+        <article class="about-card">
+            <h3>🎯 Hobbies & Interests</h3>
+            <p>
+                Coding, learning new technologies, reading,
+                personal finance, educational technology,
+                gaming, and building creative web applications.
+            </p>
+        </article>
+
+    </div>
   </section>
 <section id="contact" class="page">
 
