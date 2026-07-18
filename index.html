@@ -257,6 +257,26 @@
     background:#1d4ed8;
 
 }
+    .page.active{
+
+    opacity:1;
+
+    transform:none;
+
+    position:relative;
+
+    }
+    nav a.active{
+
+    color:white;
+
+    background:#2563eb;
+
+    border-radius:8px;
+
+    padding:.6rem 1rem;
+
+    }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -310,6 +330,7 @@
 </section>
     <nav>
       <ul>
+        <li><a href="planner.html">Academic Planner</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#blogs">Blog</a></li>
         <li><a href="#about-me">About</a></li>
@@ -473,7 +494,18 @@
   <footer>
     <p>&copy; 2026 Fatimah Hamzah. All rights reserved.</p>
   </footer>
+<script>
+  links.forEach(a=>{
+    a.classList.remove("active");
+});
 
+link.classList.add("active");
+  history.pushState(
+    null,
+    "",
+    "#" + target
+);
+</script>
 </body>
 </html>
 
