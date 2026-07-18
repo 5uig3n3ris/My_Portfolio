@@ -24,6 +24,84 @@
       max-width: 1000px;
       margin: auto;
     }
+    .hero{
+    min-height:85vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:4rem 2rem;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef6ff
+    );
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.greeting{
+    color:#2563eb;
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,5rem);
+    margin:.2rem 0;
+}
+
+.hero h2{
+    color:#475569;
+    font-size:1.6rem;
+    margin-bottom:1.5rem;
+}
+
+.hero-text{
+    color:#64748b;
+    font-size:1.1rem;
+    margin-bottom:2rem;
+}
+    .hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:.9rem 1.8rem;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.25s;
+}
+
+.primary{
+    background:#2563eb;
+    color:white;
+}
+
+.primary:hover{
+    background:#1d4ed8;
+}
+
+.secondary{
+    border:2px solid #2563eb;
+    color:#2563eb;
+}
+
+.secondary:hover{
+    background:#2563eb;
+    color:white;
+}
     .about-container {
   display: flex;
   align-items: center;
@@ -74,8 +152,32 @@
 
   <!-- Header with Navigation -->
   <header>
-    <h1>Hey, I'm Fatimah Hamzah</h1>
-    <p>A creative developer passionate about web, games, and finance.</p>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="greeting">👋 Hello, I'm</p>
+
+        <h1>Fatimah Hamzah</h1>
+
+        <h2>Creative Developer & Problem Solver</h2>
+        <img src = "WAHEEDAH ENLARGED PPT.jpg" alt = "A photo of me" class = "profile-photo">
+
+        <p class="hero-text">
+            I build interactive web applications, educational platforms,
+            data dashboards, and modern user experiences using HTML, CSS,
+            JavaScript, Python, and Firebase.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn primary">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Me
+            </a>
+        </div>
+    </div>
+</section>
     <nav>
       <ul>
         <li><a href="#projects">Projects</a></li>
@@ -141,6 +243,9 @@
     <p>GitHub: <a href="#" target="_blank">my GitHub</a></p>
   </section>
 
+  <div style="text-align:center;">
+    <a href="#home" class ="btn primary">Home</a>
+  </div>
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Fatimah Hamzah. All rights reserved.</p>
